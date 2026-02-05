@@ -1,0 +1,26 @@
+{
+    "name": "PhD Env (Py3.12)",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+
+    "workspaceFolder": "/workspace",
+
+    "customizations": {
+        "vscode": {
+            "settings": { 
+                "python.defaultInterpreterPath": "/usr/bin/python3",
+                "terminal.integrated.defaultProfile.linux": "bash"
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-vscode.cpptools",
+                "ms-python.vscode-pylance"
+            ]
+        }
+    },
+    "remoteUser": "root"
+}
