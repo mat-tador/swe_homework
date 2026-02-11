@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 
-RUN pip3 install numpy matplotlib pandas pytest --break-system-packages
+RUN pip3 install numpy matplotlib pandas pytest pytest-cov --break-system-packages
 
 
 RUN echo 'PS1="\e[01;32m\u@\h\e[m:\e[01;34m\w\e[m\$ "' >> /root/.bashrc
